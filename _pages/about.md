@@ -4,10 +4,10 @@ title: about
 permalink: /
 subtitle: I am an undergraduate student in Computer Science at University of Minnesota
 
-profile:
-  align: left
-  image: 
-  image_circular: false # crops the image to make it circular
+# profile:
+#   align: left
+#   image: prof_pic.jpg
+#   image_circular: false # crops the image to make it circular
   # more_info: >
   #   <p>555 your office number</p>
   #   <p>123 your address street</p>
