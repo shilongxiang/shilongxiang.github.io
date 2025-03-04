@@ -1,7 +1,7 @@
 {% for social in site.data.socials %}
   {% case social[0] %}
     {% when 'cv_pdf' %}
-      <a href="{{ social[1] | relative_url }}" title="CV" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-file-pdf"></i></a>
+      <a href="{{ social[1] | relative_url }}" title="CV" target="_blank" rel="noopener noreferrer">CV</a>
 
     {% when 'acm_id' %}
       <a href="https://dl.acm.org/profile/{{ social[1] }}/" title="ACM DL"><i class="ai ai-acm"></i></a>
