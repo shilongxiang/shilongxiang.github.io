@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-My paper "Multi-View Learning with Multimodal Fusion for Urban Walkability Prediction" was accepted to AAAI-SAPP:smile:
+Our paper, "Multi-View Learning with Multimodal Fusion for Urban Walkability Prediction" was accepted to AAAI-SAPP:smile:
