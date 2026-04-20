@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shilong Xiang</title>
+  <meta name="description" content="Shilong Xiang - CS undergraduate at University of Minnesota, interested in ML, VLMs, and RL research.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --bg-alt: #f8f9fa;
+      --text: #2d3436;
+      --text-secondary: #636e72;
+      --accent: #4a6cf7;
+      --accent-light: #e8edff;
+      --border: #e9ecef;
+      --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --shadow-lg: 0 10px 30px rgba(0,0,0,0.08);
+      --radius: 12px;
+      --max-width: 860px;
+    }
+
+    [data-theme="dark"] {
+      --bg: #1a1a2e;
+      --bg-alt: #16213e;
+      --text: #e4e6eb;
+      --text-secondary: #b0b3b8;
+      --accent: #6c8cff;
+      --accent-light: #1e2a4a;
+      --border: #2d3748;
+      --shadow: 0 1px 3px rgba(0,0,0,0.3);
+      --shadow-lg: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      font-size: 15px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    a { color: var(--accent); text-decoration: none; transition: opacity 0.2s; }
+    a:hover { opacity: 0.8; }
+
+    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 24px; }
+
+    /* Navigation */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+      background: rgba(255,255,255,0.9);
+    }
+    [data-theme="dark"] nav {
+      background: rgba(26,26,46,0.9);
+    }
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 56px;
+    }
+    nav .name {
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--text);
+    }
+    nav .links { display: flex; gap: 24px; align-items: center; }
+    nav .links a {
+      color: var(--text-secondary);
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    nav .links a:hover { color: var(--accent); opacity: 1; }
+    .theme-toggle {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--text-secondary);
+      font-size: 16px;
+      padding: 4px;
+      transition: color 0.2s;
+    }
+    .theme-toggle:hover { color: var(--accent); }
+
+    /* Hero / About */
+    .hero {
+      padding: 60px 0 48px;
+    }
+    .hero-content {
+      display: flex;
+      gap: 48px;
+      align-items: flex-start;
+    }
+    .hero-photo {
+      flex-shrink: 0;
+    }
+    .hero-photo img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: var(--shadow-lg);
+    }
+    .hero-text h1 {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 36px;
+      font-weight: 600;
+      margin-bottom: 4px;
+      letter-spacing: -0.5px;
+    }
+    .hero-text .subtitle {
+      color: var(--text-secondary);
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+    .hero-text .bio {
+      color: var(--text);
+      margin-bottom: 20px;
+      font-size: 15px;
+    }
+    .hero-text .bio strong { font-weight: 600; }
+    .social-links { display: flex; gap: 16px; flex-wrap: wrap; }
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-secondary);
+      font-size: 14px;
+      padding: 6px 14px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      transition: all 0.2s;
+    }
+    .social-links a:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+      background: var(--accent-light);
+      opacity: 1;
+    }
+    .social-links a i { font-size: 15px; }
+
+    /* Sections */
+    section { padding: 40px 0; }
+    .section-title {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 24px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
+    }
+
+    /* News */
+    .news-list { list-style: none; }
+    .news-item {
+      display: flex;
+      gap: 16px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      align-items: baseline;
+    }
+    .news-item:last-child { border-bottom: none; }
+    .news-date {
+      color: var(--text-secondary);
+      font-size: 13px;
+      font-weight: 500;
+      flex-shrink: 0;
+      width: 90px;
+      font-variant-numeric: tabular-nums;
+    }
+    .news-text { font-size: 15px; }
+
+    /* Footer */
+    footer {
+      padding: 32px 0;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 13px;
+      margin-top: 40px;
+    }
+
+    /* Responsive */
+    @media (max-width: 680px) {
+      .hero-content { flex-direction: column; align-items: center; text-align: center; gap: 24px; }
+      .hero-photo img { width: 140px; height: 140px; }
+      .social-links { justify-content: center; }
+      .hero-text h1 { font-size: 28px; }
+      .award-grid { grid-template-columns: 1fr; }
+      .exp-header { flex-direction: column; gap: 2px; }
+      nav .links { gap: 14px; }
+      nav .links a { font-size: 13px; }
+    }
+
+    /* Scroll animation */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="#" class="name">Shilong Xiang</a>
+    <div class="links">
+      <a href="#news">News</a>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <i class="fas fa-moon"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<main class="container">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-photo">
+        <img src="assets/img/prof_pic.jpg" alt="Shilong Xiang">
+      </div>
+      <div class="hero-text">
+        <h1>Shilong Xiang</h1>
+        <p class="bio">
+          I am an undergraduate student majoring in Computer Science at the <strong>University of Minnesota</strong>.
+          I am broadly interested in <strong>Generative AI</strong> and <strong>Large Vision Language Models</strong>.
+          Previously advised by Prof. <a href="https://yaoyichi.github.io/">Yao-Yi Chiang</a>,
+          I am now very fortunate to be advised by Prof. <a href="https://chengzhi-mao.github.io/">Chengzhi Mao</a> 😊
+        </p>
+        <div class="social-links">
+          <a href="mailto:xsl030523@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+          <a href="https://scholar.google.com/" target="_blank"><i class="ai ai-google-scholar"></i> Scholar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- News -->
+  <section id="news" class="fade-in">
+    <h2 class="section-title">News</h2>
+    <ul class="news-list">
+      <li class="news-item">
+        <span class="news-date">Nov 2025</span>
+        <span class="news-text">Received the <strong>UMN Undergraduate Research Opportunities (UROP) Grant Award</strong>.</span>
+      </li>
+      <li class="news-item">
+        <span class="news-date">Feb 2025</span>
+        <span class="news-text">Received the <strong>UMN MURAJ In-Action Grant Award</strong>.</span>
+      </li>
+    </ul>
+  </section>
+
+
+</main>
+
+<footer>
+  <div class="container">
+    <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fshilongxiang.github.io&count_bg=%234a6cf7&title_bg=%23636e72&icon=&icon_color=%23E7E7E7&title=visitors&edge_flat=true" alt="visitors"></a>
+    <br>
+    &copy; 2025 Shilong Xiang
+  </div>
+</footer>
+
+<script>
+function toggleTheme() {
+  const body = document.body;
+  const isDark = body.getAttribute('data-theme') === 'dark';
+  body.setAttribute('data-theme', isDark ? '' : 'dark');
+  const icon = document.querySelector('.theme-toggle i');
+  icon.className = isDark ? 'fas fa-moon' : 'fas fa-sun';
+  localStorage.setItem('theme', isDark ? 'light' : 'dark');
+}
+
+(function() {
+  const saved = localStorage.getItem('theme');
+  if (saved === 'dark') {
+    document.body.setAttribute('data-theme', 'dark');
+    document.querySelector('.theme-toggle i').className = 'fas fa-sun';
+  }
+})();
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
